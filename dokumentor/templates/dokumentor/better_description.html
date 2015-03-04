@@ -1,13 +1,17 @@
 {% extends "dokumentor/base_dokumentor.html" %}
 
 {% block content %}
-<p> Better Description </p>
+
+<h1>{{ project.name }}</h1>
+
+<h2>Better Description</h2>
+
 <form method="post" action="">
   {% csrf_token %}
   {{ form.as_p }}
   <p>
-  <input type="submit" value="Ajouter ces info sur la fabrication"/>
-  <a href="{% url 'projects:index' %}">retour</a>
+  <input type="submit" value="Ajouter ces infos sur la fabrication"/>
+  <a href="{% url 'projects:index' %}">Retour</a>
   </p>
 </form>
 {% endblock content %}

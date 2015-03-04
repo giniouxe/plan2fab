@@ -50,4 +50,4 @@ def better_description(request, id):
         return redirect('projects:index')
     else:
         form = BetterDescriptionForm(instance=project)
-    return render(request, 'dokumentor/better_description.html', {'form': form})
+    return render(request, 'dokumentor/better_description.html', {'form': form, 'project': project})
